@@ -2,6 +2,8 @@ import React from "react";
 import NavListItem from "../Components/NavListItem";
 import navlistData from "../data/navListData";
 import "./header.css";
+import Search from "../Components/Search";
+import MainButton from "../Components/Button";
 
 const Header = () => {
   return (
@@ -14,6 +16,11 @@ const Header = () => {
           <NavListItem key={nav.id} nav={nav} />
         ))}
       </ul>
+      <Search />
+      <MainButton
+        icon={<ion-icon name="log-in-outline"></ion-icon>}
+        name="Sign In"
+      />
     </header>
   );
 };
